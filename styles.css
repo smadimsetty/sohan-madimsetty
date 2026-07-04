@@ -250,3 +250,25 @@ button {
   letter-spacing: 0.06em;
   opacity: 0.6;
 }
+
+@media (max-width: 480px) {
+  body {
+    padding: 16px;
+  }
+
+  .hero-name {
+    margin: 40px 0 32px;
+  }
+
+  .contact-list li {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+  }
+}
