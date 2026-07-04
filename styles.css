@@ -163,3 +163,17 @@ button {
   background: var(--color-fg);
   color: var(--color-bg);
 }
+
+.interest-list {
+  list-style: none;
+  margin: 0;
+  padding: 16px 0 32px;
+}
+
+.interest-list li {
+  display: inline;
+}
+
+.interest-list li:not(:last-child)::after {
+  content: " \00b7 ";
+}
