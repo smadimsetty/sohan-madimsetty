@@ -69,3 +69,11 @@ modalCloseBtn.addEventListener('click', closeModal);
 modalBackdrop.addEventListener('click', (e) => {
   if (e.target === modalBackdrop) closeModal();
 });
+
+const homeBtn = document.getElementById('homeBtn');
+homeBtn.addEventListener('click', () => {
+  setDisclosureState(experience.toggle, experience.panel, false);
+  setDisclosureState(interests.toggle, interests.panel, false);
+  closeModal();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
