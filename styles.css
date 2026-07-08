@@ -36,6 +36,11 @@ button {
   cursor: pointer;
 }
 
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .topbar {
   display: flex;
   justify-content: space-between;
@@ -218,9 +223,9 @@ button {
   justify-content: center;
   width: 40px;
   height: 40px;
-  border: 1px solid var(--color-fg);
-  color: var(--color-fg);
-  transition: background-color var(--transition-fast), color var(--transition-fast);
+  border-radius: 50%;
+  color: #fff;
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
 }
 
 .contact-icon svg {
@@ -230,8 +235,33 @@ button {
 
 .contact-icon:hover,
 .contact-icon:focus-visible {
-  background: var(--color-fg);
-  color: var(--color-bg);
+  transform: scale(1.08);
+  opacity: 0.9;
+}
+
+.contact-icon:focus-visible {
+  outline: 2px solid var(--color-fg);
+  outline-offset: 2px;
+}
+
+.contact-icon--phone {
+  background: #34c759;
+}
+
+.contact-icon--email {
+  background: #ea4335;
+}
+
+.contact-icon--x {
+  background: #000000;
+}
+
+.contact-icon--linkedin {
+  background: #0a66c2;
+}
+
+.contact-icon--instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
 }
 
 @media (max-width: 480px) {
